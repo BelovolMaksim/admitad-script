@@ -1,0 +1,28 @@
+import requests
+
+# Ваш токен доступа
+access_token = 'c6SaWD0B5lLBEaKzr9Hbv2tlbciAuG'
+
+# URL для GET-запроса
+url = 'https://api.admitad.com/advertiser/2uX4ARWENmasWcC25fz0I7kuZw4h0l/statistics/groups/'
+
+# Заголовки с авторизацией
+headers = {
+    'Authorization': f'Bearer {access_token}',
+}
+
+try:
+    # Отправляем GET-запрос
+    response = requests.get(url, headers=headers)
+
+    # Проверяем успешность запроса и выводим результат
+    if response.status_code == 200:
+        data = response.json()
+        # Обработайте данные здесь
+        print(data)
+    else:
+        print(f'Ошибка при запросе: {response.status_code}')
+        print(response.text)
+except Exception as e:
+    # Вывод сообщения об ошибке
+    print(f'Произошла ошибка: {e}')
