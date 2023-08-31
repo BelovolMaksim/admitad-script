@@ -2,8 +2,8 @@ import requests
 from base64 import b64encode
 
 # Ваши данные для аутентификации
-client_id = '2uX4ARWENmasWcC25fz0I7kuZw4h0l'
-client_secret = 'akcBDkbFjELx5sNzDZoNuM9tLlc7S8'
+client_id = 'client_id из аккаунта'
+client_secret = 'client_secret из аккаунта'
 
 # Формируем строку с данными и кодируем её в Base64
 credentials = f"{client_id}:{client_secret}"
